@@ -1,50 +1,19 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as Soup
+from urllib.request import urlopen as uReq
 import csv
 
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-driver = webdriver.Chrome('./chromedriver', options=chrome_options)
-driver.get('file:///Users/ahmed/Downloads/CWUR%202018-2019%20_%20Top%20Universities%20in%20the%20World.html')
-# time.sleep(5)
+url = 'https://cwur.org/2018-19.php'
 
-soup = BeautifulSoup(driver.page_source.encode("utf-8"), features="html.parser")
-tables = soup.findChildren('table')
-
-my_table = tables[0]
-
-head = my_table.findChildren(['th'])
-rows = my_table.findChildren(['tr'])
-
-
-def head_row():
-    head_list = []
-    for h in head:
-        head_list.append(h.string)
-    return head_list
-
-
-def body_rows():
-    data_list = []
-    for row in rows:
-        cells = row.findChildren('td')
-        for cell in cells:
-            print(cell)
-
-
-
-body_rows()
-
-# for row in rows:
-#     cells = row.findChildren('td')
-#     print(cells)
-#     # if len(cells) > 0:
-#         # for cell in cells:
-#         #     # value = cell.string
-#         #     # print(value)
-#     print("----")
-
-# with open('test.csv', 'w', newline='') as file:
-#     writer = csv.writer(file)
-#     writer.writerow(head_row())
+soup = Soup(uReq(url), "html.parser")
+table = soup.find_all("table", {"class": "table"})
+with open('to_scrape.csv', 'w', encoding='utf-8', newline='') as csvfile:
+    f = csv.writer(csvfile, delimiter='\t')
+    for table_data in table:
+        table_body = table_data.find('tbody')
+        rows = table_body.find_all('tr')
+        for tr in rows:
+            data = []
+            cols = tr.find_all('td')
+            nav_anchor = cols[1].find('a', href=True)
+            data.append("https://cwur.org/"+nav_anchor['href'])
+            f.writerow(data)

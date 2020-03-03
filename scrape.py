@@ -33,6 +33,7 @@ def body_rows():
             print(cell)
 
 
+
 body_rows()
 
 # for row in rows:

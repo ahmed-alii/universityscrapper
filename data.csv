@@ -1,0 +1,124 @@
+"Institution Name	"	"Native Name	"	"Location	"	"World Rank	"	National Rank	"Quality of Education Rank	"	"Alumni Employment Rank	"	"Quality of Faculty Rank	"	"Research Output Rank	"	"Quality Publications Rank	"	"Influence Rank	"	"Citations Rank	"	"Overall Score	"	Domain
+Harvard University 	Harvard University 	USA	1	1	2	1	1	1	1	1	1	100	harvard.edu
+Stanford University 	Stanford University 	USA	2	2	10	3	2	10	4	3	2	96.7	stanford.edu
+Massachusetts Institute of Technology 	Massachusetts Institute of Technology 	USA	3	3	3	11	3	30	15	2	6	95.1	mit.edu
+University of Cambridge 	University of Cambridge 	United Kingdom	4	1	5	19	6	12	8	6	19	94.0	cam.ac.uk
+University of Oxford 	University of Oxford 	United Kingdom	5	2	9	25	10	9	5	7	4	93.2	ox.ac.uk
+University of California, Berkeley 	University of California, Berkeley 	USA	6	4	7	52	5	18	12	4	8	92.5	berkeley.edu
+Princeton University 	Princeton University 	USA	7	5	4	15	4	146	99	28	27	91.9	princeton.edu
+Columbia University 	Columbia University 	USA	8	6	16	13	8	20	14	10	10	91.4	columbia.edu
+California Institute of Technology 	California Institute of Technology 	USA	9	7	1	200	7	127	81	13	31	91.0	caltech.edu
+University of Chicago 	University of Chicago 	USA	10	8	13	22	9	39	22	18	10	90.6	uchicago.edu
+Yale University 	Yale University 	USA	11	9	11	34	12	37	19	11	31	90.3	yale.edu
+University of Tokyo 	東京大学 	Japan	12	1	17	8	33	7	17	23	29	90.0	u-tokyo.ac.jp
+University of Pennsylvania 	University of Pennsylvania 	USA	13	10	31	9	30	16	11	17	13	89.7	upenn.edu
+Cornell University 	Cornell University 	USA	14	11	14	28	19	31	24	15	40	89.4	cornell.edu
+University of California, Los Angeles 	University of California, Los Angeles 	USA	15	12	58	63	11	13	10	14	5	89.1	ucla.edu
+Johns Hopkins University 	Johns Hopkins University 	USA	16	13	24	159	17	8	6	12	3	88.9	jhu.edu
+University of Toronto 	University of Toronto 	Canada	17	1	86	157	23	2	2	16	7	88.7	utoronto.ca
+University of Michigan, Ann Arbor 	University of Michigan, Ann Arbor 	USA	18	14	47	38	68	3	3	20	10	88.4	umich.edu
+University of Washington - Seattle 	University of Washington - Seattle 	USA	19	15	75	220	26	11	9	9	9	88.2	washington.edu
+University of California, San Diego 	University of California, San Diego 	USA	20	16	37	> 1000	16	28	16	5	16	88.0	ucsd.edu
+University College London 	University College London 	United Kingdom	21	3	32	739	28	5	7	19	19	87.8	ucl.ac.uk
+University of California, San Francisco 	University of California, San Francisco 	USA	22	17	 - 	> 1000	13	45	23	8	17	87.7	ucsf.edu
+Northwestern University 	Northwestern University 	USA	23	18	129	18	44	52	28	36	34	87.5	northwestern.edu
+Duke University 	Duke University 	USA	24	19	98	46	47	36	20	21	14	87.3	duke.edu
+New York University 	New York University 	USA	25	20	64	40	18	70	50	29	35	87.2	nyu.edu
+Kyoto University 	京都大学 	Japan	26	2	25	29	24	29	45	48	101	87.0	kyoto-u.ac.jp
+University of Wisconsin–Madison 	University of Wisconsin–Madison 	USA	27	21	65	79	32	32	26	30	15	86.9	wisc.edu
+ETH Zurich 	ETH Zürich 	Switzerland	28	1	29	98	20	57	42	27	59	86.7	ethz.ch
+Sorbonne University 	Sorbonne Université 	France	29	1	46	344	56	6	13	24	22	86.6	sorbonne-universite.fr
+Imperial College London 	Imperial College London 	United Kingdom	30	4	93	103	43	21	18	25	29	86.5	imperial.ac.uk
+University of Texas at Austin 	University of Texas at Austin 	USA	31	22	108	62	29	73	58	58	24	86.3	utexas.edu
+University of Illinois at Urbana–Champaign 	University of Illinois at Urbana–Champaign 	USA	32	23	40	150	27	65	55	61	50	86.2	illinois.edu
+University of North Carolina at Chapel Hill 	University of North Carolina at Chapel Hill 	USA	33	24	205	120	72	50	30	33	21	86.1	unc.edu
+University of Edinburgh 	University of Edinburgh 	United Kingdom	34	5	61	325	36	72	56	31	48	86.0	ed.ac.uk
+University of Minnesota Twin Cities 	University of Minnesota Twin Cities 	USA	35	25	131	302	76	24	21	35	28	85.9	twin-cities.umn.edu
+Washington University in St. Louis 	Washington University in St. Louis 	USA	36	26	206	161	64	81	46	22	22	85.8	wustl.edu
+McGill University 	McGill University 	Canada	37	2	68	86	65	44	36	53	39	85.6	mcgill.ca
+University of British Columbia 	University of British Columbia 	Canada	38	3	173	699	78	25	27	37	24	85.5	ubc.ca
+University of Copenhagen 	Københavns Universitet 	Denmark	39	1	302	364	79	26	29	26	38	85.4	ku.dk
+Ohio State University 	Ohio State University 	USA	40	27	165	254	70	33	31	50	35	85.3	osu.edu
+Rutgers University-New Brunswick 	Rutgers University-New Brunswick 	USA	41	28	212	101	35	74	67	62	59	85.2	newbrunswick.rutgers.edu
+University of California, Davis 	University of California, Davis 	USA	42	29	83	579	75	42	35	39	31	85.1	ucdavis.edu
+Pennsylvania State University 	Pennsylvania State University 	USA	43	30	374	168	60	43	40	41	51	85.0	psu.edu
+University of Manchester 	University of Manchester 	United Kingdom	44	6	171	227	63	49	48	65	35	85.0	manchester.ac.uk
+Weizmann Institute of Science 	מכון ויצמן למדע 	Israel	45	1	8	> 1000	22	445	292	69	254	84.9	weizmann.ac.il
+Heidelberg University 	Ruprecht-Karls-Universität Heidelberg 	Germany	46	1	71	807	51	63	64	51	53	84.8	uni-heidelberg.de
+University of Maryland, College Park 	University of Maryland, College Park 	USA	47	31	103	480	55	92	72	45	42	84.7	umd.edu
+Ludwig Maximilian University of Munich 	Ludwig-Maximilians-Universität München 	Germany	48	2	91	266	83	53	57	42	46	84.6	uni-muenchen.de
+Karolinska Institute 	Karolinska Institutet 	Sweden	49	1	162	> 1000	46	67	53	46	108	84.5	ki.se
+University of Colorado Boulder 	University of Colorado Boulder 	USA	50	32	134	170	41	145	111	40	59	84.4	colorado.edu
+University of Southern California 	University of Southern California 	USA	51	33	215	111	40	121	88	74	66	84.4	usc.edu
+University of Arizona 	University of Arizona 	USA	52	34	166	164	53	111	96	43	48	84.3	arizona.edu
+Osaka University 	大阪大学 	Japan	53	3	70	65	61	59	82	83	174	84.2	osaka-u.ac.jp
+University of Paris-Sud 	Université Paris-Sud 	France	54	2	49	815	38	103	86	98	76	84.1	u-psud.fr
+University of Geneva 	Université de Genève 	Switzerland	55	2	35	381	31	147	130	87	72	84.0	unige.ch
+Boston University 	Boston University 	USA	56	35	572	112	106	113	75	52	26	84.0	bu.edu
+University of Melbourne 	University of Melbourne 	Australia	57	1	232	408	180	35	34	54	40	83.9	unimelb.edu.au
+Brown University 	Brown University 	USA	58	36	95	50	50	186	125	85	80	83.8	brown.edu
+University of California, Irvine 	University of California, Irvine 	USA	59	37	264	> 1000	42	133	97	64	57	83.8	uci.edu
+Seoul National University 	서울대학교 	South Korea	60	1	 - 	20	 - 	19	39	146	129	83.7	snu.ac.kr
+Hebrew University of Jerusalem 	האוניברסיטה העברית בירושלים 	Israel	61	2	19	400	15	177	143	122	405	83.6	huji.ac.il
+University of Florida 	University of Florida 	USA	62	38	472	485	113	40	44	90	43	83.6	ufl.edu
+Purdue University, West Lafayette 	Purdue University, West Lafayette 	USA	63	39	96	83	58	94	93	106	129	83.5	purdue.edu
+Vanderbilt University 	Vanderbilt University 	USA	64	40	148	91	140	95	63	57	45	83.4	vanderbilt.edu
+University of Bristol 	University of Bristol 	United Kingdom	65	7	186	296	48	126	100	67	85	83.4	bristol.ac.uk
+University of Texas Southwestern Medical Center 	University of Texas Southwestern Medical Center 	USA	66	41	33	> 1000	39	244	151	34	187	83.3	utsouthwestern.edu
+Sapienza University of Rome 	"Università degli Studi di Roma ""La Sapienza"" "	Italy	67	1	117	486	34	61	103	195	71	83.2	uniroma1.it
+King's College London 	King's College London 	United Kingdom	68	8	43	341	110	88	65	79	72	83.2	kcl.ac.uk
+University of Zurich 	Universität Zürich 	Switzerland	69	3	267	771	108	80	70	49	51	83.1	uzh.ch
+University of California, Santa Barbara 	University of California, Santa Barbara 	USA	70	42	149	596	25	229	146	80	63	83.0	ucsb.edu
+University of Sydney 	University of Sydney 	Australia	71	2	231	590	208	27	33	71	46	83.0	sydney.edu.au
+Utrecht University 	Universiteit Utrecht 	Netherlands	72	1	122	352	137	58	43	56	66	82.9	uu.nl
+University of Pittsburgh 	University of Pittsburgh 	USA	73	43	187	233	 - 	34	25	47	18	82.9	pitt.edu
+University of Queensland 	University of Queensland 	Australia	74	3	310	541	181	46	51	63	53	82.8	uq.edu.au
+University of Oslo 	Universitetet i Oslo 	Norway	75	1	97	633	52	99	102	112	93	82.8	uio.no
+Rockefeller University 	Rockefeller University 	USA	76	44	15	> 1000	14	786	434	32	275	82.7	rockefeller.edu
+University of São Paulo 	Universidade de São Paulo 	Brazil	77	1	583	256	109	4	60	162	139	82.6	usp.br
+Texas A&M University, College Station 	Texas A&M University, College Station 	USA	78	45	625	183	57	85	95	133	101	82.6	tamu.edu
+University of Virginia 	University of Virginia 	USA	79	46	271	31	168	151	116	95	85	82.5	virginia.edu
+Emory University 	Emory University 	USA	80	47	 - 	197	164	101	66	55	63	82.5	emory.edu
+Free University of Berlin 	Freie Universität Berlin 	Germany	81	3	112	 > 1000	124	64	76	72	85	82.4	fu-berlin.de
+Australian National University 	Australian National University 	Australia	82	4	188	666	37	153	136	101	121	82.4	anu.edu.au
+University of Utah 	University of Utah 	USA	83	48	169	187	80	125	105	68	93	82.3	utah.edu
+Paris Diderot University 	Université Paris-Diderot 	France	84	3	192	> 1000	101	122	108	44	76	82.3	univ-paris-diderot.fr
+Tel Aviv University 	אוניברסיטת תל אביב 	Israel	85	3	105	143	59	108	115	129	151	82.2	tau.ac.il
+Uppsala University 	Uppsala universitet 	Sweden	86	2	102	548	84	107	107	66	114	82.2	uu.se
+University of Barcelona 	Universitat de Barcelona 	Spain	87	1	386	472	181	47	54	91	72	82.1	ub.edu
+Aarhus University 	Aarhus Universitet 	Denmark	88	2	589	379	114	83	79	78	121	82.1	au.dk
+University of Texas MD Anderson Cancer Center 	University of Texas MD Anderson Cancer Center 	USA	89	49	 - 	> 1000	91	158	104	70	66	82.0	mdanderson.org
+Leiden University 	Universiteit Leiden 	Netherlands	90	2	228	 > 1000	118	118	78	81	80	82.0	universiteitleiden.nl
+Carnegie Mellon University 	Carnegie Mellon University 	USA	91	50	34	145	21	318	228	221	129	81.9	cmu.edu
+Peking University 	北京大学 	China	92	1	340	67	 - 	23	38	88	167	81.9	pku.edu.cn
+University of Helsinki 	Helsingin yliopisto 	Finland	93	1	109	 > 1000	135	82	83	77	108	81.8	helsinki.fi
+Baylor College of Medicine 	Baylor College of Medicine 	USA	94	51	 - 	> 1000	141	161	118	38	53	81.8	bcm.edu
+Lund University 	Lunds universitet 	Sweden	95	3	294	753	122	90	90	121	76	81.7	lu.se
+University of Alberta 	University of Alberta 	Canada	96	4	281	371	192	62	69	117	80	81.7	ualberta.ca
+Grenoble Alpes University 	Université Grenoble-Alpes 	France	97	4	334	 > 1000	157	89	87	75	93	81.7	univ-grenoble-alpes.fr
+Tsinghua University 	清华大学 	China	98	2	586	109	 - 	22	41	96	108	81.6	tsinghua.edu.cn
+University of Basel 	Universität Basel 	Switzerland	99	4	142	393	54	218	162	89	139	81.6	unibas.ch
+University of Groningen 	Rijksuniversiteit Groningen 	Netherlands	100	3	363	482	131	97	73	104	93	81.5	rug.nl
+Humboldt University of Berlin 	Humboldt-Universität zu Berlin 	Germany	101	4	570	> 1000	225	69	77	73	80	81.5	hu-berlin.de
+École Polytechnique Fédérale de Lausanne 	École polytechnique fédérale de Lausanne 	Switzerland	102	5	400	92	141	184	126	102	53	81.4	epfl.ch
+National University of Singapore 	National University of Singapore 	Singapore	103	1	 - 	148	 - 	38	32	94	85	81.4	nus.edu.sg
+Ghent University 	Universiteit Gent 	Belgium	104	1	311	685	190	55	68	136	101	81.3	ugent.be
+University of Rochester 	University of Rochester 	USA	105	52	73	74	139	220	148	139	66	81.3	rochester.edu
+Erasmus University Rotterdam 	Erasmus Universiteit Rotterdam 	Netherlands	106	4	 - 	90	264	120	84	107	72	81.3	eur.nl
+KU Leuven 	Katholieke Universiteit Leuven 	Belgium	107	2	 - 	429	 - 	48	47	84	66	81.2	kuleuven.be
+University of Bern 	Universität Bern 	Switzerland	108	6	183	 > 1000	102	160	144	105	85	81.2	unibe.ch
+National Taiwan University 	國立臺灣大學 	Taiwan	109	1	140	37	 - 	51	61	223	151	81.1	ntu.edu.tw
+University of Montreal 	Université de Montréal 	Canada	110	5	486	455	205	86	91	93	139	81.1	umontreal.ca
+University of California, Santa Cruz 	University of California, Santa Cruz 	USA	111	53	343	> 1000	45	412	275	60	93	81.1	ucsc.edu
+Technical University of Munich 	Technische Universität München 	Germany	112	5	89	339	226	106	98	86	139	81.0	tum.de
+Nagoya University 	名古屋大学 	Japan	113	4	69	366	67	132	165	169	222	81.0	nagoya-u.ac.jp
+Arizona State University 	Arizona State University 	USA	114	54	 - 	796	111	155	139	113	114	80.9	asu.edu
+University of Bonn 	Rheinische Friedrich-Wilhelms-Universität Bonn 	Germany	115	6	123	494	105	167	158	123	101	80.9	uni-bonn.de
+École Polytechnique 	École polytechnique 	France	116	5	85	5	240	488	396	348	254	80.9	polytechnique.edu
+École normale supérieure 	École normale supérieure 	France	117	6	6	627	82	598	442	227	460	80.8	ens.fr
+University of Nottingham 	University of Nottingham 	United Kingdom	118	9	317	375	98	138	121	179	114	80.8	nottingham.ac.uk
+University of New South Wales 	University of New South Wales 	Australia	119	5	399	126	278	68	74	154	85	80.8	unsw.edu.au
+Tohoku University 	東北大学 	Japan	120	5	82	158	246	60	101	166	167	80.7	tohoku.ac.jp
+McMaster University 	McMaster University 	Canada	121	6	339	660	202	140	133	124	57	80.7	mcmaster.ca
+Dartmouth College 	Dartmouth College 	USA	122	55	48	17	232	372	258	185	240	80.6	dartmouth.edu
+University of Amsterdam 	Universiteit van Amsterdam 	Netherlands	123	5	175	872	298	79	62	82	85	80.6	uva.nl

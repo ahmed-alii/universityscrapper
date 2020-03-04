@@ -1,6 +1,8 @@
-from bs4 import BeautifulSoup as Soup
+import csv
+import time
 from urllib.request import urlopen as uReq
-import csv, time
+import urllib.parse as parse
+from bs4 import BeautifulSoup as Soup
 
 
 def get_university_list():
@@ -18,12 +20,15 @@ def get_university_list():
                 data.append("https://cwur.org/" + nav_anchor['href'])
                 f.writerow(data)
     print("Got list of URLs in `URL_LIST.csv`.")
+    time.sleep(3)
     return
 
 
 def scrape_data(url_address):
     data = []
-    page_html = uReq(url_address)
+    page_html = uReq(parse.quote(url_address, safe=":,/"))
+    # page_html = uReq(url_address.replace("–", "%E2%80%93"))
+
     soup = Soup(page_html, "html.parser")
     table = soup.find_all("table", {"class": "table"})[0]
     rows = table.find_all('tr')
@@ -41,6 +46,7 @@ def generate_header(url_address):
     for row in rows:
         data.append(row.find_all('td')[0].text)
     write_to_csv(data)
+    time.sleep(3)
     return True
 
 
@@ -61,9 +67,4 @@ def write_to_csv(data):
 def scrape_n_save(url):
     append_to_csv(scrape_data(url))
     print("Done Scrape & Save")
-
-
-get_university_list()
-# time.sleep(3)
-# generate_header('https://cwur.org/2018-19/University-of-California,-Berkeley.php')
-
+    time.sleep(3)

@@ -1,19 +1,23 @@
-from bs4 import BeautifulSoup as Soup
-from urllib.request import urlopen as uReq
+import scrapper
 import csv
 
-url = 'https://cwur.org/2018-19.php'
 
-soup = Soup(uReq(url), "html.parser")
-table = soup.find_all("table", {"class": "table"})
-with open('to_scrape.csv', 'w', encoding='utf-8', newline='') as csvfile:
-    f = csv.writer(csvfile, delimiter='\t')
-    for table_data in table:
-        table_body = table_data.find('tbody')
-        rows = table_body.find_all('tr')
-        for tr in rows:
-            data = []
-            cols = tr.find_all('td')
-            nav_anchor = cols[1].find('a', href=True)
-            data.append("https://cwur.org/"+nav_anchor['href'])
-            f.writerow(data)
+def generate_list():
+    scrapper.get_university_list()
+
+
+def get_all_data():
+    with open("URL_LIST.csv", 'r', encoding='utf-8', newline='') as csv_file:
+        data = csv.reader(csv_file, delimiter='\t')
+        scrapper.write_to_csv(["Institution Name", "Native Name", "Location", "World Rank",
+                               "National Rank", "Quality of Education Rank", "Alumni Employment Rank",
+                               "Quality of Faculty Rank", "Research Output Rank", "Quality Publications Rank",
+                               "Influence Rank", "Citations Rank", "Overall Score", "Domain"])
+        x = 0
+        for d in data:
+            x = x + 1
+            print(x, "-> ", d[0])
+            scrapper.scrape_n_save(d[0])
+
+
+get_all_data()

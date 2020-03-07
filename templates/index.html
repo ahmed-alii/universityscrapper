@@ -8,59 +8,112 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='/template.css') }}">
+    <style>
+        body {
+            overflow-x: hidden;
+            max-height: 100% !important;
+        }
+
+        .scroll-list {
+
+        }
+
+        #sidebar-wrapper {
+            overflow-y: scroll !important;
+            height: 100vh !important;
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
 
 <div class="d-flex" id="wrapper">
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Countries List </div>
-      <div class="scroll-list">
-          <div class="list-group list-group-flush">
-          {%for country in countries%}
-            <a href="/country/{{country}}" class="list-group-item list-group-item-action bg-light">{{country}}</a>
-          {%endfor%}
-          <br>
-      </div>
-      </div>
+        <div class="sidebar-heading">Countries List</div>
+        <div class="scroll-list">
+            <div class="list-group list-group-flush">
+                {%for country in countries%}
+                <a href="/country/{{country}}" class="list-group-item list-group-item-action bg-light">{{country}}</a>
+                {%endfor%}
+                <br>
+            </div>
+        </div>
 
     </div>
 
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle"> ⇌ </button>
-        <a href="/" class="btn btn-outline-primary m-2"> University Rankings Assignment · Arbisoft </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle"> ⇌</button>
+            <a href="/" class="btn btn-outline-primary m-2"> University Rankings Assignment · Arbisoft </a>
 
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Ahmed :)<span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-      </nav>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Ahmed :)<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </nav>
 
-      <div class="container-fluid">
-          <div style="width: 100%; height: 18%" class="m-3 row">
-              <div class="col-lg-4 col-sm-4 col-md-4">
-                  <p>Country</p>
-                  <h4>{{current}}</h4>
-              </div>
-              <div class="col-lg-4 col-sm-4 col-md-4">
-                  <p>Total Universities</p>
-                  <h4>{{uni_count}}</h4>
-              </div>
-              <div class="col-lg-4 col-sm-4 col-md-4">
-                  <p>Average Ranking</p>
-                  <h4>{{'%0.2f'| format(avg_ranking|float)}}</h4>
-              </div>
-          </div>
+        <div class="container-fluid">
+            <div style="width: 100%; height: 18%" class="m-3 row">
+                <div class="col-lg-4 col-sm-4 col-md-4">
+                    <p>Country</p>
+                    <h4>{{current}}</h4>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4">
+                    <p>Total Universities</p>
+                    <h4>{{uni_count}}</h4>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4">
+                    <p>Average Ranking</p>
+                    <h4>{{'%0.2f'| format(avg_ranking|float)}}</h4>
+                </div>
+            </div>
 
-          <div style="width: 100%; height: 80%" class="container">
-              <canvas id="myChart" style="display: block"></canvas>
-          </div>
-      </div>
+            <div style="width: 100%; height: 80%" class="container">
+                <canvas id="myChart" style="display: block"></canvas>
+            </div>
+        </div>
     </div>
-  </div>
-
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -73,7 +126,7 @@
     let coloR = [];
     let numbers = [];
 
-    let dynamicColors = function() {
+    let dynamicColors = function () {
         const r = Math.floor(Math.random() * 255);
         const g = Math.floor(Math.random() * 255);
         const b = Math.floor(Math.random() * 255);
@@ -81,7 +134,7 @@
     };
 
 
-    for (d of data){
+    for (d of data) {
         names.push(d[0]);
         numbers.push(Number(d[1]));
         coloR.push(dynamicColors());
@@ -89,32 +142,32 @@
 
     let ctx = document.getElementById('myChart');
     new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: names,
-        datasets: [{
-            label: 'Ratings count',
-            data: numbers,
-            backgroundColor: coloR,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
+        type: 'bar',
+        data: {
+            labels: names,
+            datasets: [{
+                label: 'Ratings count',
+                data: numbers,
+                backgroundColor: coloR,
+                borderWidth: 1
             }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
         }
-    }
-});
+    });
 </script>
 <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
     });
-  </script>
+</script>
 </body>
 </html>

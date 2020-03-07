@@ -1,4 +1,4 @@
-import scrapper
+from scraper import scrapper
 import csv
 
 

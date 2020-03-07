@@ -2,44 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Ratings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="../static/template.css">
 </head>
 <body>
-<div style="width: 400px; height: 300px">
-    <canvas id="myChart" width="400px" height="400px"></canvas>
-</div>
+
+
+<div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Countries List </div>
+      <div class="scroll-list">
+          <div class="list-group list-group-flush">
+          {%for country in countries%}
+            <a href="/country/{{country}}" class="list-group-item list-group-item-action bg-light">{{country}}</a>
+          {%endfor%}
+          <br>
+      </div>
+      </div>
+
+    </div>
+
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle"> ⇌ </button>
+        <a href="/" class="btn btn-outline-primary m-2"> University Rankings Assignment · Arbisoft </a>
+
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Ahmed :)<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+      </nav>
+
+      <div class="container-fluid">
+          <div style="width: 100%; height: 18%" class="m-3 row">
+              <div class="col-lg-4 col-sm-4 col-md-4">
+                  <p>Country</p>
+                  <h4>{{current}}</h4>
+              </div>
+              <div class="col-lg-4 col-sm-4 col-md-4">
+                  <p>Total Universities</p>
+                  <h4>{{uni_count}}</h4>
+              </div>
+              <div class="col-lg-4 col-sm-4 col-md-4">
+                  <p>Average Ranking</p>
+                  <h4>{{'%0.2f'| format(avg_ranking|float)}}</h4>
+              </div>
+          </div>
+
+          <div style="width: 100%; height: 80%" class="container">
+              <canvas id="myChart" style="display: block"></canvas>
+          </div>
+      </div>
+    </div>
+  </div>
 
 
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 <script>
-    var ctx = document.getElementById('myChart');
+    let data = JSON.parse('{{data|tojson}}');
+    let names = [];
+    let coloR = [];
+    let numbers = [];
+
+    let dynamicColors = function() {
+        const r = Math.floor(Math.random() * 255);
+        const g = Math.floor(Math.random() * 255);
+        const b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    };
+
+
+    for (d of data){
+        names.push(d[0]);
+        numbers.push(Number(d[1]));
+        coloR.push(dynamicColors());
+    }
+
+    let ctx = document.getElementById('myChart');
     new Chart(ctx, {
-    type: 'radar',
+    type: 'bar',
     data: {
-        labels: ['University 1', 'Uni2', 'Uni3', 'Uni4', 'Purple', 'Orange', "huh"],
+        labels: names,
         datasets: [{
             label: 'Ratings count',
-            data: [12, 19, 3, 5, 2, 14, 20],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(200, 100, 70, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(200, 100, 70, 1)'
-            ],
+            data: numbers,
+            backgroundColor: coloR,
             borderWidth: 1
         }]
     },
@@ -54,5 +110,11 @@
     }
 });
 </script>
+<script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 </body>
 </html>

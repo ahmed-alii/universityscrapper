@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import rankings as r
+from scraper import rankings as r
 
 app = Flask(__name__)
 
@@ -9,7 +9,6 @@ countries = r.get_countries()
 @app.route('/')
 def index():
     data = r.flask_results("Pakistan")
-
     return render_template("index.html",
                            data=data["graph_data"].values.tolist(),
                            countries=countries,

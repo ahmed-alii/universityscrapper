@@ -1,5 +1,3 @@
-# universityscrapper
-
 To run the code;
 Make sure you have python3.x. 
 
